@@ -167,35 +167,3 @@ if ('IntersectionObserver' in window) {
     });
 }
 
-// Floating Call Button & Modal
-const floatingCallBtn = document.getElementById('floatingCallBtn');
-const callModal = document.getElementById('callModal');
-const modalClose = document.getElementById('modalClose');
-
-// Open modal when floating button is clicked
-floatingCallBtn.addEventListener('click', () => {
-    callModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-// Close modal when close button is clicked
-modalClose.addEventListener('click', () => {
-    callModal.classList.remove('active');
-    document.body.style.overflow = '';
-});
-
-// Close modal when clicking outside the modal content
-callModal.addEventListener('click', (e) => {
-    if (e.target === callModal) {
-        callModal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && callModal.classList.contains('active')) {
-        callModal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-});
