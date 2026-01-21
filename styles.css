@@ -781,6 +781,106 @@ section {
 }
 
 /* ===================================
+   Location Section
+   =================================== */
+.location {
+    padding: 80px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.location .section-subtitle {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+.location-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.location-details {
+    background: var(--cream);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.location-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.location-details p {
+    color: var(--text-color);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.location-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.location-details a:hover {
+    color: var(--dark-brown);
+}
+
+.directions-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+    background: var(--dark-brown);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+}
+
+.location-map {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.location-map iframe {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .location-map iframe {
+        height: 350px;
+    }
+}
+
+/* ===================================
    Contact Section
    =================================== */
 .contact {
@@ -981,6 +1081,17 @@ section {
 
 .social-icon {
     font-size: 1.2rem;
+}
+
+.social-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-logo {
+    transform: scale(1.1);
 }
 
 /* ===================================
@@ -1265,11 +1376,11 @@ button, a, .service-card, .barber-card, .gallery-item {
 .service-details .service-price {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--dark-brown);
 }
 
 .service-details .service-price {
-    color: var(--gold-accent);
+    color: var(--dark-brown);
 }
 
 .change-service-btn {
