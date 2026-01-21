@@ -96,6 +96,13 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .logo {
@@ -845,7 +852,7 @@ section {
     margin-top: 1rem;
     padding: 0.8rem 1.5rem;
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--white) !important;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
@@ -854,7 +861,7 @@ section {
 
 .directions-btn:hover {
     background: var(--dark-brown);
-    color: var(--white);
+    color: var(--white) !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
 }
