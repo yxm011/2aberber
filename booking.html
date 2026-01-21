@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - 2ABERBER Barbershop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/aa-logo.png" alt="2ABERBER Barbershop" class="logo-img">
+                </a>
+                
+                <a href="https://wa.me/905323977073" class="whatsapp-icon-btn" aria-label="WhatsApp" target="_blank">
+                    <img src="images/whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo-img">
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="index.html#barbers" class="nav-link">Barbers</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Page Header -->
+    <section class="booking-header">
+        <div class="container">
+            <h1 class="page-title">Schedule Your Service</h1>
+            <div class="title-underline"></div>
+            
+            <!-- Selected Service Display -->
+            <div class="selected-service-display" id="selectedServiceDisplay">
+                <div class="service-badge">
+                    <span class="badge-label">Selected Service:</span>
+                    <h2 class="service-name" id="serviceName">Haircut</h2>
+                    <p class="service-subtitle" id="serviceSubtitle">saç kesimi</p>
+                    <div class="service-details">
+                        <span class="service-duration" id="serviceDuration">⏱ 40 min</span>
+                        <span class="service-price" id="servicePrice">600 ₺</span>
+                    </div>
+                </div>
+                <a href="services.html" class="change-service-btn">Change Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Calendar Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h3>Select Date & Time</h3>
+                    <p>Choose your preferred date and time slot. We're open:</p>
+                    <ul class="hours-list">
+                        <li><strong>Monday - Friday:</strong> 9:00 AM - 8:00 PM</li>
+                        <li><strong>Saturday:</strong> 10:00 AM - 8:00 PM</li>
+                        <li><strong>Sunday:</strong> Closed</li>
+                    </ul>
+                    <p class="booking-note">📅 Time slots are available in 30-minute intervals</p>
+                </div>
+
+                <!-- Cal.com Embed Container -->
+                <div class="cal-embed-container">
+                    <!-- Cal.com will be embedded here -->
+                    <div id="cal-booking-embed" 
+                         data-cal-link="your-cal-username/30min"
+                         data-cal-config='{"layout":"month_view","theme":"light"}'>
+                    </div>
+                    
+                    <!-- Placeholder message until Cal.com is configured -->
+                    <div class="cal-placeholder" id="calPlaceholder">
+                        <div class="placeholder-icon">📅</div>
+                        <h3>Calendar Integration Ready</h3>
+                        <p>Cal.com integration is set up and ready to connect.</p>
+                        <p class="placeholder-note">To activate live booking, we need your Cal.com credentials:</p>
+                        <ul class="credentials-list">
+                            <li>Cal.com username or booking link</li>
+                            <li>Event type ID (for the service duration)</li>
+                            <li>API key (optional, for advanced features)</li>
+                        </ul>
+                        <div class="placeholder-features">
+                            <h4>Configured Features:</h4>
+                            <ul>
+                                <li>✓ 30-minute time intervals</li>
+                                <li>✓ Custom business hours (Mon-Fri: 9am-8pm, Sat: 10am-8pm)</li>
+                                <li>✓ Sunday closures</li>
+                                <li>✓ Service-specific duration tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://wa.me/905323977073" target="_blank" class="social-link" aria-label="WhatsApp">
+                        <span class="social-icon">💬</span>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/2.a.berber/" target="_blank" class="social-link" aria-label="Instagram">
+                        <span class="social-icon">📷</span>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/2aberber/" target="_blank" class="social-link" aria-label="Facebook">
+                        <span class="social-icon">👤</span>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <p>&copy; 2024 2ABERBER Barbershop. All rights reserved.</p>
+                <p>Crafted with precision and care in Istanbul</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ElevenLabs ConvAI Widget -->
+    <elevenlabs-convai 
+        agent-id="agent_1101kbcxkt8yejwbet5gjnv14ewa"
+        avatar-size="80"
+    ></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    
+    <!-- Cal.com Embed Script -->
+    <script type="text/javascript">
+        (function (C, A, L) { 
+            let p = function (a, ar) { 
+                a.q.push(ar); 
+            }; 
+            let d = C.document; 
+            C.Cal = C.Cal || function () { 
+                let cal = C.Cal; 
+                let ar = arguments; 
+                if (!cal.loaded) { 
+                    cal.ns = {}; 
+                    cal.q = cal.q || []; 
+                    d.head.appendChild(d.createElement("script")).src = A; 
+                    cal.loaded = true; 
+                } 
+                if (ar[0] === L) { 
+                    const api = function () { 
+                        p(api, arguments); 
+                    }; 
+                    const namespace = ar[1]; 
+                    api.q = api.q || []; 
+                    typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); 
+                    return; 
+                } 
+                p(cal, ar); 
+            }; 
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        
+        // Cal.com will be initialized in booking.js with proper configuration
+    </script>
+    
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

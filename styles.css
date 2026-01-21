@@ -1036,3 +1036,439 @@ button, a, .service-card, .barber-card, .gallery-item {
     opacity: 0.6;
     pointer-events: none;
 }
+
+/* ===================================
+   Services Page Styles
+   =================================== */
+.services-header {
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-color) 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+}
+
+.services-page-section {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.services-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.service-page-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-page-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-page-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: var(--primary-color);
+}
+
+.service-page-image svg,
+.service-page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-page-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.service-page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 0.5rem;
+}
+
+.service-page-subtitle {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.service-page-duration {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.service-page-prices {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.service-page-prices .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+    background: rgba(212, 175, 55, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.book-now-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.3);
+}
+
+.book-now-btn:hover {
+    background: var(--gold-accent);
+    color: var(--dark-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4);
+}
+
+/* Mobile Responsive for Services Page */
+@media (max-width: 768px) {
+    .services-header {
+        padding: 120px 0 60px;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .services-page-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-page-title {
+        font-size: 1.5rem;
+    }
+
+    .service-page-prices {
+        gap: 1rem;
+    }
+
+    .service-page-prices .price {
+        font-size: 1.1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .book-now-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* ===================================
+   Booking Page Styles
+   =================================== */
+.booking-header {
+    padding: 150px 0 60px;
+    background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-color) 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.selected-service-display {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.service-badge {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.badge-label {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.service-badge .service-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--dark-brown);
+    margin: 0.5rem 0;
+}
+
+.service-badge .service-subtitle {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.service-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(139, 115, 85, 0.2);
+}
+
+.service-details .service-duration,
+.service-details .service-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.service-details .service-price {
+    color: var(--gold-accent);
+}
+
+.change-service-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.change-service-btn:hover {
+    background: var(--white);
+    color: var(--dark-brown);
+}
+
+.booking-section {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.booking-info {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.booking-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.booking-info p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.hours-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+    color: var(--text-color);
+}
+
+.hours-list li:last-child {
+    border-bottom: none;
+}
+
+.booking-note {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold-accent);
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+}
+
+.cal-embed-container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-height: 600px;
+}
+
+.cal-placeholder {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.placeholder-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.cal-placeholder h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.cal-placeholder p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.placeholder-note {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
+.credentials-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+    text-align: left;
+    display: inline-block;
+}
+
+.credentials-list li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.credentials-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--gold-accent);
+    font-weight: bold;
+}
+
+.placeholder-features {
+    background: rgba(139, 115, 85, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.placeholder-features h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.placeholder-features ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.placeholder-features li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+}
+
+/* Mobile Responsive for Booking Page */
+@media (max-width: 768px) {
+    .booking-header {
+        padding: 120px 0 40px;
+    }
+
+    .service-badge {
+        padding: 1.5rem 2rem;
+    }
+
+    .service-badge .service-name {
+        font-size: 1.6rem;
+    }
+
+    .service-details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .booking-info {
+        padding: 1.5rem;
+    }
+
+    .cal-embed-container {
+        padding: 1.5rem;
+    }
+
+    .placeholder-icon {
+        font-size: 3rem;
+    }
+
+    .cal-placeholder h3 {
+        font-size: 1.5rem;
+    }
+}
