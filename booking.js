@@ -138,8 +138,8 @@ document.addEventListener('DOMContentLoaded', function() {
     displayServiceInfo();
     
     // Cal.com API configuration
-    const CAL_API_KEY = 'cal_live_e9b0a62e6b14e8598e4f9e73efab2772';
-    const calUsername = 'fusion-beat-0zu0fw'; // Your Cal.com username
+    const CAL_API_KEY = 'cal_live_72107e80dcd58b5d2aee2b8a966a77a6';
+    const calUsername = 'ai-barber-3y1bs0'; // Your Cal.com username
     
     // Use single event type for all services - 30min slots
     const eventType = '30min';

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Appointments - 2ABERBER</title>
+    <link rel="stylesheet" href="appointments.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <img src="images/aa-logo.png" alt="2ABERBER Barbershop" class="dashboard-logo">
+            <h1 class="dashboard-title">Today's Appointments</h1>
+        </header>
+
+        <!-- Current Date & Time Display -->
+        <div class="datetime-display">
+            <div class="current-date" id="currentDate">Loading...</div>
+            <div class="current-time" id="currentTime">00:00:00</div>
+        </div>
+
+        <!-- Appointments List -->
+        <div class="appointments-section">
+            <div class="appointments-header">
+                <div class="header-col time-col">Time</div>
+                <div class="header-col customer-col">Customer</div>
+                <div class="header-col service-col">Service</div>
+                <div class="header-col duration-col">Duration</div>
+                <div class="header-col status-col">Status</div>
+            </div>
+
+            <div class="appointments-list" id="appointmentsList">
+                <!-- Appointments will be loaded here dynamically -->
+                <div class="loading-message">
+                    <div class="spinner"></div>
+                    <p>Loading today's appointments...</p>
+                </div>
+            </div>
+
+            <!-- No Appointments Message -->
+            <div class="no-appointments" id="noAppointments" style="display: none;">
+                <div class="no-appointments-icon">📅</div>
+                <h3>No Appointments Today</h3>
+                <p>Enjoy your free day or welcome walk-in customers!</p>
+            </div>
+        </div>
+
+        <!-- Summary Footer -->
+        <div class="dashboard-footer">
+            <div class="summary-item">
+                <span class="summary-label">Total Appointments:</span>
+                <span class="summary-value" id="totalCount">0</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Completed:</span>
+                <span class="summary-value completed" id="completedCount">0</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Upcoming:</span>
+                <span class="summary-value upcoming" id="upcomingCount">0</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Working Hours:</span>
+                <span class="summary-value" id="workingHours">9:00 AM - 8:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="appointments.js"></script>
+</body>
+</html>

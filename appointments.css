@@ -1,0 +1,363 @@
+/* ===================================
+   Appointments Dashboard Styles
+   =================================== */
+
+:root {
+    --primary-color: #8B7355;
+    --dark-brown: #6B5744;
+    --cream: #F5F1E8;
+    --white: #FFFFFF;
+    --text-dark: #2C2C2C;
+    --text-light: #666666;
+    --gold-accent: #D4AF37;
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --danger: #F44336;
+    --border-color: #E0E0E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(135deg, #F5F1E8 0%, #E8DCC8 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.dashboard-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header Section */
+.dashboard-header {
+    background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-color) 100%);
+    padding: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.dashboard-logo {
+    height: 80px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.dashboard-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Date & Time Display */
+.datetime-display {
+    background: var(--cream);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.current-date {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.current-time {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+/* Appointments Section */
+.appointments-section {
+    padding: 2rem;
+    min-height: 500px;
+}
+
+.appointments-header {
+    display: grid;
+    grid-template-columns: 120px 1fr 2fr 120px 120px;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.header-col {
+    text-align: left;
+}
+
+.time-col {
+    text-align: center;
+}
+
+.status-col,
+.duration-col {
+    text-align: center;
+}
+
+/* Appointments List */
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.appointment-card {
+    display: grid;
+    grid-template-columns: 120px 1fr 2fr 120px 120px;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.appointment-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(139, 115, 85, 0.15);
+    transform: translateY(-2px);
+}
+
+.appointment-card.completed {
+    opacity: 0.6;
+    background: #f9f9f9;
+}
+
+.appointment-card.current {
+    border-color: var(--gold-accent);
+    background: #fffef8;
+    box-shadow: 0 5px 25px rgba(212, 175, 55, 0.2);
+}
+
+.appointment-time {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.appointment-customer {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.customer-phone {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+}
+
+.appointment-service {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.service-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
+.appointment-duration {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.appointment-status {
+    text-align: center;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.upcoming {
+    background: #E3F2FD;
+    color: #1976D2;
+}
+
+.status-badge.current {
+    background: #FFF3E0;
+    color: #F57C00;
+    animation: pulse 2s infinite;
+}
+
+.status-badge.completed {
+    background: #E8F5E9;
+    color: #388E3C;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Loading State */
+.loading-message {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-light);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* No Appointments State */
+.no-appointments {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-light);
+}
+
+.no-appointments-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.no-appointments h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.no-appointments p {
+    font-size: 1.2rem;
+}
+
+/* Dashboard Footer */
+.dashboard-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--cream);
+    border-top: 3px solid var(--primary-color);
+}
+
+.summary-item {
+    text-align: center;
+}
+
+.summary-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.summary-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.summary-value.completed {
+    color: var(--success);
+}
+
+.summary-value.upcoming {
+    color: #1976D2;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .appointments-header,
+    .appointment-card {
+        grid-template-columns: 100px 1fr 1.5fr 100px 100px;
+        font-size: 0.95rem;
+    }
+    
+    .dashboard-title {
+        font-size: 2rem;
+    }
+    
+    .current-time {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .appointments-header {
+        display: none;
+    }
+    
+    .appointment-card {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .appointment-time,
+    .appointment-customer,
+    .appointment-service,
+    .appointment-duration,
+    .appointment-status {
+        text-align: left;
+    }
+    
+    .dashboard-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .current-time {
+        font-size: 2rem;
+    }
+}
